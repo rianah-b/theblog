@@ -1,13 +1,281 @@
 body {
-background-color: brown;
+background-color: #4D80BA;
 
 }
 
-.meccha img{
-    width: 500px; 
+.nav_bar {
+    background-color: #F2F3D8; /* Light background */
+    width: 100%; /* Full width */
+    height: 60px; /* Set a fixed height */
+    padding: 10px 30px; /* Adjust padding */
+    display: flex;
+    justify-content: left; /* Align links to the left */
+    align-items: center;
+    position: fixed; /* Fix it at the top */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Ensures it's above other content */
+    border-bottom: 2px solid #ddd; /* Optional: Light border */
+}
+
+/* Style navigation links */
+.nav_bar a {
+    text-decoration: none;
+    font-family: "inter";
+    color: #d14c18;
+    font-weight: light;
+    margin-right: 20px; /* Space between links */
+    font-size: 18px; /* Increase font size */
+    cursor: pointer; /* Makes it clear it's clickable */
+}
+
+.back-to-top {
+    margin-left: 60%; /* Pushes it to the right */
+    background-color: #b2ab2b; /* Button background */
+    color: white; /* Text color */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: light;
+    transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #f4d68c; /* Darker on hover */
+}
+
+header { 
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: "inter", sans-serif;
+    font-style: italic;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 80px;
+    color: #402924;
+    height: 100vh;
+    position: relative; 
+    transform: translateY(-2%); /* Adjust this value to move header up */
+    font-optical-sizing: auto;
+
+}
+
+.sprite {
+    height: 815px;
+    width: 500px;
+    background: #4D80BA;
+    background: url(../img/spritemecchamatcha.png) 0 -20px;
+    display: flex; /* Enable flexbox for sprite */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    margin-top: -55%; 
+    margin-left: 32%;
+    transform: scale(0.9); /* Shrinks the sprite to 70% of its original size */
+}
+
+/* Hover Effect */
+.sprite:hover{
+  background: url(../img/spritemecchamatcha.png) 0 -780px;
+}
+
+.info {
+    width: 486px;
+    height: 291px;
+    flex-shrink: 0;
+    color: #f4d68c;
+    display: flex;
+     position: absolute;
+        top: 40%;
+        left: 2.7%;
+    font-family: Inter;
+    font-size: 38px;
+    font-weight:300;
+    line-height: normal;
+}
+
+
+.button {
+    background-color: #f4d68c; /* Background color of the button */
+    color: #673c33; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 20px 50px; /* Add padding for a larger clickable area */
+    display: inline-flex; /* Make the link behave like a button */
+    justify-content: center; /* Centers the text inside */
+    align-items: center; /* Centers the text vertically */
+    position: absolute;
+    top: 40%; /* Position from the top */
+    right: 2.7%; /* Position from the right */
+    font-size: 24px; /* Font size of the button text */
+    font-family: 'inter', sans-serif; /* Font family */
+    text-align: center; /* Centers text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    width: auto; /* Let the width adjust based on content */
+    height: auto; /* Adjusts based on padding */
+    border: none; /* Ensures no borders appear */
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: #f4d178; /* Slightly darker color on hover */
+}
+
+.marquee {
+    width: 100%; /* Full-width bar */
+    background-color: #F2F3D8; /* Background color */
+    color: #d14c18; /* Text color */
+    font-family: "inter";
+    font-style: italic;
+    font-size: 28px; /* Text size */
+    font-weight:light;
+    padding: 20px 0; /* Padding for spacing */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides text outside container */
+    position: relative; /* Keeps it at the top */
+    top: 0%;
+    left: 10;
+    transform: translateY(-100%);
+    z-index: 9998; /* Ensures it's above other content */
+}
+
+.marquee span {
+    display: inline-block;
+    animation: marquee-scroll 10s linear infinite;
+    padding-right: 50px; /* Adds space between words */
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+.review {
+    display: flex;
+    justify-content: center;
+    font-family: "inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: light;
+    font-size: 40px;
+    color: #f4d68c;
+    height: 15vh;
+    position: relative; 
+    transform: translateY(-10%);
+    font-optical-sizing: auto;
+
+
+}
+
+.indent {
+    display: block;  /* Make the span behave like a block element */
+    margin-left: 30px; /* Adjust the indent size as needed */
+}
+
+
+.custom-section {
+    background-color: #F2F3D8; /* Change this to any color you want */
+    display: flex;
+    justify-content: center; /* Align links to the left */
+    align-items: center;
+    position: relative; /* Fix it at the top */
+    left: 2.5%;
+    width: 95%; /* Full width */
+    height: 600px; /* Adjust height as needed */
+    border-radius: 30px; /* Makes the corners rounded */
+}
+
+.section-image {
+    position: absolute;
+    top: 50%; /* Center image vertically */
+    left: 20%; /* Center image horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+    width: 400px; /* Adjust size as needed */
     height: auto;
-    margin-right: 20px; 
-    padding: 30px;
+    z-index: 2; /* Ensures it appears above the section */
+    border-radius: 30px;
+}
+
+.custom-section .paragraph{
+    font-family: "inter";
+    max-width: 50%;
+    font-size: 28px;
+    margin-right: -40%;
 
 }
 
+
+.marquee2 {
+    width: 100%; /* Full-width bar */
+    background-color: #F2F3D8; /* Background color */
+    color: #d14c18; /* Text color */
+    font-family: "Inter", sans-serif; /* Font */
+    font-style: italic;
+    font-size: 28px; /* Text size */
+    font-weight: light;
+    padding: 20px 0; /* Padding for spacing */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides text outside container */
+    position: relative; /* Keeps it at the top */
+    top: 0%;
+    transform: translateY(65%);
+    z-index: 9998; /* Ensures it's above other content */
+}
+
+.marquee2 span {
+    display: inline-block;
+    animation: marquee-scroll 15s linear infinite; /* Adjust speed */
+    padding-right: 150px; /* Adds space between words */
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen on the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left and out of view */
+    }
+}
+
+.section3 {
+    background-color: #F2F3D8; /* Change this to any color you want */
+    display: flex;
+    justify-content: center; /* Align links to the left */
+    align-items: center;
+    position: relative; /* Fix it at the top */
+    margin-top: 25%;
+    left: 2.5%;
+    width: 65%; /* Full width */
+    height: 600px; /* Adjust height as needed */
+    border-radius: 30px; /* Makes the corners rounded */
+
+}
+
+
+.section3 .img{
+    display: flex;
+    max-width: 40%;
+    max-height: auto;
+    margin-top: 10%;
+    margin-left: 155%;
+}
+
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
