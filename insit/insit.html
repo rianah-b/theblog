@@ -16,17 +16,17 @@
     <nav class="nav_bar">
         <a href="../index.html">HOME</a>
         <a href="../mecchamatcha/mecchamatcha.html">MECCHA MATCHA</a>
-        <a href="../stereoscope/stereoscope.html">STEREOSCOPE<a>
-        <a href="#top" class="back-to-top">BACK TO TOP</a>
+        <a href="../stereoscope/stereoscope.html">STEREOSCOPE</a>
     </nav>
-       
+    <a href="#top" class="back-to-top">BACK TO TOP</a>
     <div id="top"></div>
 
-    <header>
-        <h1>IN-SĪT</h1>
-    </header>
-        
-    <div class="sprite"> </div>
+
+    <section>
+        <h1>IN-SĪT CAFE</h1>
+        <img src="../insit/img/insit.svg" class="mainimg">
+    </section>
+    
         
     <div class="info">
             location: buena park, california
@@ -49,15 +49,23 @@
 
  </div>
         
-    <div class="review">
-        <h2>REVIEW</h2>
-    </div>
         
     <section class="custom-section">
         <img src="../insit/img/IMG_3267.JPG" alt="Description" class="section-image">
-    <p class="paragraph">
-        <span class="indent">I recently tried the matcha at Insit Matcha in Buena</span> Park, and unfortunately, it wasn’t my favorite. The flavor didn’t quite hit the mark for me and it tasted more like green tea ice cream than the rich, earthy matcha I was hoping for. <span class="indent">While the texture was smooth, it felt overly sweet </span>and lacked the depth of flavor that I typically enjoy in a good matcha. It almost had a dessert-like quality, which might appeal to some, but it wasn’t what I was looking for in a matcha drink. <span class="indent">Overall, I didn’t find it to be as satisfying or authentic</span> as I’d hoped, but it could be a good option for those who enjoy sweeter, ice cream-like matcha flavors.
+        <div class="text-content">
+            <h3 class="headersinp">WHAT IS IN-SĪT?</h3>
+            <p class="paragraph">
+            Insit Matcha in Buena Park is a sit in cafe that spcializes in coffee and matcha tonics!
+        </p>
+            <h3 class="headersinp">TASTE</h3>
+            <p class="paragraph">
+            The flavor didn’t quite hit the mark for me and it tasted more like green tea ice cream than the rich, earthy matcha I was hoping for.  It felt overly sweet and lacked the depth of flavor that I typically enjoy in a good matcha. It almost had a dessert-like quality, which might appeal to some, but it wasn’t what I was looking for in a matcha drink. 
+            </p>
+            <h3 class="headersinp">FINAL THOUGHTS</h3>
+            <p class="paragraph">
+            Overall, I didn’t find it to be as satisfying or authentic as I’d hoped, but it could be a good option for those who enjoy sweeter, ice cream-like matcha flavors.
     </p> 
+    </div>
     </section>
        
        <div class="marquee2">
@@ -69,12 +77,42 @@
     </div>
 
 
-    <section class="section3">
-    <img src="../insit/img/IMG_3267.JPG" alt="" class="img">
     
-
+    <section class="section3">
+        <video class="lastvideo" controls playsinline>
+            <source src="../insit/img/IMG_3265-1.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        
+            <img class="section3-image" src="../img/project2_assets/insitrate.svg">
     
 
     </section>
+
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const video = document.querySelector(".lastvideo");
+      
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  video.play().then(() => {
+                    // success
+                  }).catch((err) => {
+                    console.warn("Autoplay blocked:", err);
+                  });
+                }
+              });
+            },
+            {
+              threshold: 0.5, // play when 50% visible
+            }
+          );
+      
+          if (video) observer.observe(video);
+        });
+      </script>
 </body>
 </html>
